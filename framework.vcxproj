@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D85A2456-5C39-437D-8B44-974553675FA2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>framework</RootNamespace>
+    <ProjectName>cppFramework</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir);$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir);$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(SolutionDir);$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Audio\System.Audio_DSound.cpp" />
+    <ClCompile Include="src\CPP11\System.IO.File_CPP11.cpp" />
+    <ClCompile Include="src\DX10\System.Drawing.Effect_DX10.cpp" />
+    <ClCompile Include="src\DX10\System.Drawing.Query_DX10.cpp" />
+    <ClCompile Include="src\DX10\System.Drawing.Renderer_DX10.cpp" />
+    <ClCompile Include="src\DX9\System.Drawing.Effect_DX9.cpp" />
+    <ClCompile Include="src\DX9\System.Drawing.Query_DX9.cpp" />
+    <ClCompile Include="src\OpenGL\System.Drawing.Effect_OpenGL.cpp" />
+    <ClCompile Include="src\OpenGL\System.Drawing.IndexBuffer_OpenGL.cpp" />
+    <ClCompile Include="src\OpenGL\System.Drawing.Light_OpenGL.cpp" />
+    <ClCompile Include="src\OpenGL\System.Drawing.Mesh_OpenGL.cpp" />
+    <ClCompile Include="src\OpenGL\System.Drawing.Query_OpenGL.cpp" />
+    <ClCompile Include="src\OpenGL\System.Drawing.Renderer_OpenGL.cpp" />
+    <ClCompile Include="src\OpenGL\System.Drawing.RenderTargetView_OpenGL.cpp" />
+    <ClCompile Include="src\OpenGL\System.Drawing.Shader_OpenGL.cpp" />
+    <ClCompile Include="src\OpenGL\System.Drawing.Sprite_OpenGL.cpp" />
+    <ClCompile Include="src\OpenGL\System.Drawing.StateBlock_OpenGL.cpp" />
+    <ClCompile Include="src\OpenGL\System.Drawing.Surface_OpenGL.cpp" />
+    <ClCompile Include="src\OpenGL\System.Drawing.VertexBuffer_OpenGL.cpp" />
+    <ClCompile Include="src\System.Drawing.Scene.cpp" />
+    <ClCompile Include="src\System.ResourceManager.cpp" />
+    <ClCompile Include="src\ScriptEngine\System.ScriptEngine_Lua.cpp" />
+    <ClCompile Include="src\UI\System.Drawing.UI.Button.cpp" />
+    <ClCompile Include="src\UI\System.Drawing.UI.Element.cpp" />
+    <ClCompile Include="src\UI\System.Drawing.UI.Image.cpp" />
+    <ClCompile Include="src\UI\System.Drawing.UI.Label.cpp" />
+    <ClCompile Include="src\UI\System.Drawing.UI.Panel.cpp" />
+    <ClCompile Include="src\UI\System.Drawing.UI.UIManager.cpp" />
+    <ClCompile Include="src\WIN32\System.ComSafeArray.cpp" />
+    <ClCompile Include="src\ScriptEngine\System.ScriptEngine_MsScript.cpp" />
+    <ClCompile Include="src\DX9\System.Drawing.Renderer_DX9.cpp" />
+    <ClCompile Include="src\CPP11\System.Threading.Thread_CPP11.cpp" />
+    <ClCompile Include="src\DX10\System.Drawing.Font_DX10.cpp" />
+    <ClCompile Include="src\DX10\System.Drawing.Graphics_DX10.cpp" />
+    <ClCompile Include="src\DX10\System.Drawing.IndexBuffer_DX10.cpp" />
+    <ClCompile Include="src\DX10\System.Drawing.Light_DX10.cpp" />
+    <ClCompile Include="src\DX10\System.Drawing.Mesh_DX10.cpp" />
+    <ClCompile Include="src\DX10\System.Drawing.RenderTargetView_DX10.cpp" />
+    <ClCompile Include="src\DX10\System.Drawing.Shader_DX10.cpp" />
+    <ClCompile Include="src\DX10\System.Drawing.StateBlock_DX10.cpp" />
+    <ClCompile Include="src\DX10\System.Drawing.Texture_DX10.cpp" />
+    <ClCompile Include="src\DX10\System.Drawing.VertexBuffer_DX10.cpp" />
+    <ClCompile Include="src\DX11\System.Drawing.Renderer_DX11.cpp" />
+    <ClCompile Include="src\DX11\System.Drawing.Effect_DX11.cpp" />
+    <ClCompile Include="src\DX11\System.Drawing.Graphics_DX11.cpp" />
+    <ClCompile Include="src\DX11\System.Drawing.IndexBuffer_DX11.cpp" />
+    <ClCompile Include="src\DX11\System.Drawing.Light_DX11.cpp" />
+    <ClCompile Include="src\DX11\System.Drawing.Mesh_DX11.cpp" />
+    <ClCompile Include="src\DX11\System.Drawing.Query_DX11.cpp" />
+    <ClCompile Include="src\DX11\System.Drawing.RenderTargetView_DX11.cpp" />
+    <ClCompile Include="src\DX11\System.Drawing.Shader_DX11.cpp" />
+    <ClCompile Include="src\DX11\System.Drawing.Sprite_DX11.cpp" />
+    <ClCompile Include="src\DX11\System.Drawing.StateBlock_DX11.cpp" />
+    <ClCompile Include="src\DX11\System.Drawing.Surface_DX11.cpp" />
+    <ClCompile Include="src\DX11\System.Drawing.Texture_DX11.cpp" />
+    <ClCompile Include="src\DX11\System.Drawing.VertexBuffer_DX11.cpp" />
+    <ClCompile Include="src\DX9\System.Drawing.Font_DX9.cpp" />
+    <ClCompile Include="src\DX9\System.Drawing.Graphics_DX9.cpp" />
+    <ClCompile Include="src\DX9\System.Drawing.IndexBuffer_DX9.cpp" />
+    <ClCompile Include="src\DX9\System.Drawing.Light_DX9.cpp" />
+    <ClCompile Include="src\DX9\System.Drawing.Mesh_DX9.cpp" />
+    <ClCompile Include="src\DX9\System.Drawing.RenderTargetView_DX9.cpp" />
+    <ClCompile Include="src\DX9\System.Drawing.Shader_DX9.cpp" />
+    <ClCompile Include="src\DX9\System.Drawing.Sprite_DX9.cpp" />
+    <ClCompile Include="src\DX9\System.Drawing.StateBlock_DX9.cpp" />
+    <ClCompile Include="src\DX9\System.Drawing.Texture_DX9.cpp" />
+    <ClCompile Include="src\DX9\System.Drawing.VertexBuffer_DX9.cpp" />
+    <ClCompile Include="src\OpenGL\System.Drawing.Graphics_OpenGL.cpp" />
+    <ClCompile Include="src\OpenGL\System.Drawing.Texture_OpenGL.cpp" />
+    <ClCompile Include="src\stdafx.cpp" />
+    <ClCompile Include="src\System.String.cpp" />
+    <ClCompile Include="src\WIN32\System.ClientApp_WIN32.cpp" />
+    <ClCompile Include="src\WIN32\System.Guid_WIN32.cpp" />
+    <ClCompile Include="src\WIN32\System.IO.File_WIN32.cpp" />
+    <ClCompile Include="src\WIN32\System.Net.HttpClient_WIN32.cpp" />
+    <ClCompile Include="src\WIN32\System.Threading.Thread_WIN32.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Math\System.Drawing.Colors.h" />
+    <ClInclude Include="include\World3D\System.World3D.Entity.h" />
+    <ClInclude Include="include\Math\System.Drawing.Math_XNA.h" />
+    <ClInclude Include="include\OpenGL\System.Drawing.Effect.h" />
+    <ClInclude Include="include\OpenGL\System.Drawing.IndexBuffer.h" />
+    <ClInclude Include="include\OpenGL\System.Drawing.Light.h" />
+    <ClInclude Include="include\OpenGL\System.Drawing.Mesh.h" />
+    <ClInclude Include="include\OpenGL\System.Drawing.Query.h" />
+    <ClInclude Include="include\OpenGL\System.Drawing.Renderer.h" />
+    <ClInclude Include="include\OpenGL\System.Drawing.RenderTargetView.h" />
+    <ClInclude Include="include\OpenGL\System.Drawing.Shader.h" />
+    <ClInclude Include="include\OpenGL\System.Drawing.Sprite.h" />
+    <ClInclude Include="include\OpenGL\System.Drawing.StateBlock.h" />
+    <ClInclude Include="include\OpenGL\System.Drawing.Surface.h" />
+    <ClInclude Include="include\OpenGL\System.Drawing.VertexBuffer.h" />
+    <ClInclude Include="include\System.Collections.Set.h" />
+    <ClInclude Include="include\UI\System.Drawing.UI.Button.h" />
+    <ClInclude Include="include\UI\System.Drawing.UI.Element.h" />
+    <ClInclude Include="include\CPP11\System.IO.File.h" />
+    <ClInclude Include="include\CPP11\System.IO.Folder.h" />
+    <ClInclude Include="include\DX10\System.Drawing.Effect.h" />
+    <ClInclude Include="include\DX10\System.Drawing.Query.h" />
+    <ClInclude Include="include\DX10\System.Drawing.Renderer.h" />
+    <ClInclude Include="include\DX9\System.Drawing.Effect.h" />
+    <ClInclude Include="include\DX9\System.Drawing.Query.h" />
+    <ClInclude Include="include\Math\System.Drawing.Math_CPP.h" />
+    <ClInclude Include="include\Math\System.Drawing.Math_D3DX.h" />
+    <ClInclude Include="include\Math\System.Drawing.Math_SSE.h" />
+    <ClInclude Include="include\ScriptEngine\System.ScriptEngine_Lua.h" />
+    <ClInclude Include="include\System.Drawing.Scene.h" />
+    <ClInclude Include="include\UI\System.Drawing.UI.Image.h" />
+    <ClInclude Include="include\UI\System.Drawing.UI.Label.h" />
+    <ClInclude Include="include\UI\System.Drawing.UI.Panel.h" />
+    <ClInclude Include="include\UI\System.Drawing.UI.TextBox.h" />
+    <ClInclude Include="include\UI\System.Drawing.UI.UIManager.h" />
+    <ClInclude Include="include\WIN32\System.ComSafeArray.h" />
+    <ClInclude Include="include\CPP11\System.Threading.Mutex.h" />
+    <ClInclude Include="include\CPP11\System.Threading.Thread.h" />
+    <ClInclude Include="include\DX10\DX10.h" />
+    <ClInclude Include="include\DX10\System.Drawing.Font.h" />
+    <ClInclude Include="include\DX10\System.Drawing.Graphics.h" />
+    <ClInclude Include="include\DX10\System.Drawing.IndexBuffer.h" />
+    <ClInclude Include="include\DX10\System.Drawing.Light.h" />
+    <ClInclude Include="include\DX10\System.Drawing.Mesh.h" />
+    <ClInclude Include="include\DX10\System.Drawing.RenderTargetView.h" />
+    <ClInclude Include="include\DX10\System.Drawing.Shader.h" />
+    <ClInclude Include="include\DX10\System.Drawing.Sprite.h" />
+    <ClInclude Include="include\DX10\System.Drawing.StateBlock.h" />
+    <ClInclude Include="include\DX10\System.Drawing.Texture.h" />
+    <ClInclude Include="include\DX10\System.Drawing.VertexBuffer.h" />
+    <ClInclude Include="include\DX11\DX11.h" />
+    <ClInclude Include="include\DX11\System.Drawing.Renderer.h" />
+    <ClInclude Include="include\DX11\System.Drawing.Effect.h" />
+    <ClInclude Include="include\DX11\System.Drawing.Graphics.h" />
+    <ClInclude Include="include\DX11\System.Drawing.IndexBuffer.h" />
+    <ClInclude Include="include\DX11\System.Drawing.Light.h" />
+    <ClInclude Include="include\DX11\System.Drawing.Mesh.h" />
+    <ClInclude Include="include\DX11\System.Drawing.Query.h" />
+    <ClInclude Include="include\DX11\System.Drawing.RenderTargetView.h" />
+    <ClInclude Include="include\DX11\System.Drawing.Shader.h" />
+    <ClInclude Include="include\DX11\System.Drawing.Sprite.h" />
+    <ClInclude Include="include\DX11\System.Drawing.StateBlock.h" />
+    <ClInclude Include="include\DX11\System.Drawing.Surface.h" />
+    <ClInclude Include="include\DX11\System.Drawing.Texture.h" />
+    <ClInclude Include="include\DX11\System.Drawing.VertexBuffer.h" />
+    <ClInclude Include="include\DX9\DX9.h" />
+    <ClInclude Include="include\DX9\System.Drawing.Font.h" />
+    <ClInclude Include="include\DX9\System.Drawing.Graphics.h" />
+    <ClInclude Include="include\DX9\System.Drawing.IndexBuffer.h" />
+    <ClInclude Include="include\DX9\System.Drawing.Light.h" />
+    <ClInclude Include="include\DX9\System.Drawing.Mesh.h" />
+    <ClInclude Include="include\DX9\System.Drawing.RenderTargetView.h" />
+    <ClInclude Include="include\DX9\System.Drawing.Shader.h" />
+    <ClInclude Include="include\DX9\System.Drawing.Sprite.h" />
+    <ClInclude Include="include\DX9\System.Drawing.StateBlock.h" />
+    <ClInclude Include="include\DX9\System.Drawing.Texture.h" />
+    <ClInclude Include="include\DX9\System.Drawing.VertexBuffer.h" />
+    <ClInclude Include="include\OpenGL\OpenGL.h" />
+    <ClInclude Include="include\OpenGL\System.Drawing.Graphics.h" />
+    <ClInclude Include="include\OpenGL\System.Drawing.Texture.h" />
+    <ClInclude Include="include\stdafx.h" />
+    <ClInclude Include="include\System.Application.h" />
+    <ClInclude Include="include\System.Assembly.h" />
+    <ClInclude Include="include\System.AutoPtr.h" />
+    <ClInclude Include="include\System.Buffer.h" />
+    <ClInclude Include="include\System.Collections.Array.h" />
+    <ClInclude Include="include\System.Collections.h" />
+    <ClInclude Include="include\System.Collections.List.h" />
+    <ClInclude Include="include\System.Collections.Map.h" />
+    <ClInclude Include="include\System.Collections.Queue.h" />
+    <ClInclude Include="include\System.Collections.Stack.h" />
+    <ClInclude Include="include\System.ComPtr.h" />
+    <ClInclude Include="include\System.DateTime.h" />
+    <ClInclude Include="include\System.Drawing.Camera.h" />
+    <ClInclude Include="include\System.Drawing.Easing.h" />
+    <ClInclude Include="include\System.Drawing.Font.h" />
+    <ClInclude Include="include\System.Drawing.Graphics.h" />
+    <ClInclude Include="include\System.Drawing.h" />
+    <ClInclude Include="include\System.Drawing.IGraphics.h" />
+    <ClInclude Include="include\System.Drawing.IndexBuffer.h" />
+    <ClInclude Include="include\System.Drawing.Light.h" />
+    <ClInclude Include="include\System.Drawing.Math.h" />
+    <ClInclude Include="include\System.Drawing.Renderer.h" />
+    <ClInclude Include="include\System.Drawing.RenderTargetView.h" />
+    <ClInclude Include="include\System.Drawing.Shader.h" />
+    <ClInclude Include="include\System.Drawing.Sprite.h" />
+    <ClInclude Include="include\System.Drawing.Texture.h" />
+    <ClInclude Include="include\System.Drawing.VertexBuffer.h" />
+    <ClInclude Include="include\System.Formula.Kinematics.h" />
+    <ClInclude Include="include\System.Guid.h" />
+    <ClInclude Include="include\System.h" />
+    <ClInclude Include="include\System.IComparable.h" />
+    <ClInclude Include="include\System.IFormattable.h" />
+    <ClInclude Include="include\System.IO.File.h" />
+    <ClInclude Include="include\System.IO.Folder.h" />
+    <ClInclude Include="include\System.IO.h" />
+    <ClInclude Include="include\System.IParseable.h" />
+    <ClInclude Include="include\System.Math.h" />
+    <ClInclude Include="include\System.Number.h" />
+    <ClInclude Include="include\System.Random.h" />
+    <ClInclude Include="include\System.ScriptEngine.h" />
+    <ClInclude Include="include\System.String.h" />
+    <ClInclude Include="include\System.Threading.Event.h" />
+    <ClInclude Include="include\System.Threading.h" />
+    <ClInclude Include="include\System.Threading.Mutex.h" />
+    <ClInclude Include="include\System.Threading.Thread.h" />
+    <ClInclude Include="include\targetver.h" />
+    <ClInclude Include="include\WIN32\System.Application.h" />
+    <ClInclude Include="include\WIN32\System.Assembly.h" />
+    <ClInclude Include="include\WIN32\System.ClientApp.h" />
+    <ClInclude Include="include\WIN32\System.IO.File.h" />
+    <ClInclude Include="include\WIN32\System.IO.Folder.h" />
+    <ClInclude Include="include\WIN32\System.Net.HttpClient.h" />
+    <ClInclude Include="include\WIN32\System.Threading.Mutex.h" />
+    <ClInclude Include="include\WIN32\System.Threading.Thread.h" />
+    <ClInclude Include="include\DX9\System.Drawing.Renderer.h" />
+    <ClInclude Include="include\ScriptEngine\System.ScriptEngine_MsScript.h" />
+    <ClInclude Include="include\System.ResourceManager.h" />
+    <ClInclude Include="include\Audio\System.Audio_DSound.h" />
+    <ClInclude Include="include\System.OOP.h" />
+    <ClInclude Include="include\World3D\System.World3D.Scene.h" />
+    <ClInclude Include="src\UI\System.Drawing.UI.TextBox.cpp" />
+    <ClInclude Include="include\System.Variant.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="msscript.tlh" />
+    <None Include="msscript.tli" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
